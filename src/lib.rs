@@ -3,8 +3,8 @@ mod compute;
 pub use compute::simulate_moon_earth;
 
 #[pyfunction]
-fn simulate_moon_earth_py() -> Vec<Vec<f64>> {
-    simulate_moon_earth()
+fn simulate_moon_earth_py(dt: f64, steps: i32) -> Vec<Vec<f64>> {
+    simulate_moon_earth(dt, steps)
 }
 
 #[pymodule]
